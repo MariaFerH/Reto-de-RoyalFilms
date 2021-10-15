@@ -1,0 +1,180 @@
+*{
+
+    box-sizing: border-box;
+    }
+    
+img{
+    display: block;
+    max-width: 100%;
+    }
+
+*{
+    margin: 5;
+    padding: 50;
+}
+
+h1{
+    font-size: 20px;
+    font-family: sans-serif;
+    font-weight: bold;
+    text-align: left;
+    margin-bottom: 5px; 
+}
+h2{
+    font-size: 20px;
+    font-family: sans-serif;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 5px; 
+}
+h3{
+    font: bold 14px sans-serif;
+    text-align: left;
+}
+h4{
+    font: bold 14px sans-serif;
+    text-align: left;
+}
+header, section, nav {
+    /*border: 1px solid black;*/
+    display: block;
+}
+body{
+    text-align: left;
+    background-color: rgb(17, 35, 197);
+
+}
+.Header .Contenedor{
+    display: flex;
+    justify-content: space-between;
+}
+.contenedor{
+    width: 960px;
+    border: 1px solid black;
+    margin: 15px auto;
+    background-color: #fff;
+
+
+    }
+    .Menu_item .left{
+        float: left;
+        
+    }
+    .cerrar .right{
+        float: right;
+        
+    }
+    .buscar .center{
+        background:blue;
+    
+    
+}
+
+.Logo, .Icon_menu{
+    margin: 5px;
+    color: blue;
+}
+
+.Icon_menu{
+    display: block;
+    height:40px;
+    width: 40px;
+    font-size: 30px;
+    border:  5px solid black;
+    color: white;
+    text-align: center;
+    line-height: 40px;
+    border-radius:5px;
+    cursor: pointer;
+}
+
+.Nav{
+    position:absolute;
+    top:60px;
+    left: -100%;
+    width: 100%;
+    transition:all 0.5s;
+}
+li {
+    display: inline;
+}
+.Menu{
+    list-style: none;
+    padding:0;
+    margin:0;
+}
+
+.Menu_link{
+    display:block;
+    padding:15px;
+    background-color: blue;
+    color: white;
+    text-decoration: none;
+}
+
+.Menu_item:hover{
+    background-color: white;
+    color:#fba919;
+
+}
+.cabecera h1{
+    text-align: center;
+}
+.navegacion{
+    background-color: #b2bec3;
+    padding: 5px 15px;
+    text-align: left;
+}
+.navegacion li {
+    list-style: none;
+    padding: 5px;
+    font: 14px bold sans-serif;
+    display: inline-block;
+
+}
+.seccion{
+    margin: 20px;
+    width: 900px;
+    float: left;
+}
+.seccion{
+    background-color: #fffbcc;
+    border: 1px solid black;
+    padding: 50px;
+    margin-bottom: 15px;
+    align-items: center;
+    
+}
+
+#form {
+    width: 250px;
+    margin: 0 auto;
+    height: 50px
+}
+
+#form p {
+    text-align: center;
+}
+
+#form label{
+    font-size: 20px
+}
+input[type="radio"]{
+    display:none
+}
+label{
+    color: grey;
+
+}
+.clasificacion{
+    direction: ltr;
+    unicode-bidi: bidi-override;
+}
+label:hover,
+label:hover ~ label{
+    color: orange;
+}
+input[type="radio"]:checked ~ label{
+    color: orange;
+
+}
