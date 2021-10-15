@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <title>ROYAL FILMS</title>
+</head>
+
+    <body>
+        <header "class=cabecera">
+            <div class="contenedor">
+            <h1 class="Logo">ROYAL FILMS</h1>
+                <img src="{{ url_for('static', filename='img/menu_logo.png' ) }}" class="Icon_menu" id="btn_menu">
+                <nav clas="navegacion" id="Nav">
+                    <ul class="Menú">             
+                        <li class="Menu_item"> <a href="/" class="Menu_link">Películas</a> </li>
+                        <li class="Menu_item"><a href="/mis_peliculas" class="Menu_link">Mis funciones</a></li>
+                    </ul>
+            <div>
+            <form action="/peliculas" method="post" target="_blank">
+            <p class= "buscar" id="busca">
+                Buscar: <input type="search" name="buscarpelicula" placeholder="Eg.. End Game">
+                <input type="submit" value="Buscar">
+            </p>
+            </div>
+            <div>
+            </form>
+            </nav> 
+            <nav class="cerrar" id="cer">
+                <ul>
+                <ul id="Usuario">
+                    <li class="Menu_item"> <a href="/" class="Menu_link">Cerrar sesión</a> </li>
+                </ul>
+            </nav>
+            </div>
+        
+            
+            <h2>Mis Funciones</h2>>
+            <section class="seccion">
+            <link rel="stylesheet" href="{{ url_for('static', filename='css/mis_peliculas.css' ) }}">
+            <link rel="text/javascript" href="{{ url_for('static', filename='js/cine.js' ) }}">
+                {% for key, pelicula in listas_peliculas.items() %}
+                    <h3>{{pelicula.titulo}}</h3>
+                    <h4>{{pelicula.cuerpo}}</h4>
+                    <p>{{pelicula.imagen}}<a img =src"C\"></a></p>
+                <form>
+                <p class="clasificacion">
+                    <input id="radio1" type="radio" name="estrellas" value="5">
+                    <label for="radio1">(&#9733;)</label>
+                    <input id="radio2" type="radio" name="estrellas" value="5">
+                    <label form="radio2">(&#9733;)</label>
+                    <input id="radio3" type="radio" name="estrellas" value="5">
+                    <label form="radio3">(&#9733;)</label> 
+                    <input id="radio4" type="radio" name="estrellas" value="5">
+                    <label form="radio4">(&#9733;)</label>
+                    <input id="radio5" type="radio" name="estrellas" value="5">
+                    <label form="radio5">(&#9733;)</label>
+                </p>
+            </form>
+
+            {% endfor %}
+            </p>
+            </div>
+        </heather>
+        </section>
+    </body>
+</html>

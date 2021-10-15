@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <title>Registro de Usuario</title>
+</head>
+
+    <body>
+        <header>
+        <h1>Registro de Usuario</h1>
+        <header>
+        <form action="/registro" method="POST">
+        {{ csrf_token }}
+        <lebel for="">Nombres</lebel>
+        <input type="Nombre"  placeholder="Nombre">
+        <br>
+        <br>
+        <lebel for="">e-mail</lebel>
+        <input type="email" placeholder="Ecribir tu correo">
+        <br>
+        <br>
+        <lebel for="">Telefóno</lebel>
+        <input type="Telefóno" placeholder="Telefóno"
+        maxlength="10">
+        <br>
+        <br>
+        <label for="passwordsignup" class="youpasswd" >Contraseña </label>
+        <input id="passwordsignup" name="passwordsignup" required="required" type="password" placeholder="Contraseña"  pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" title="Debe contener al menos un número y una letra minúscula y mayúscula, y al menos 8 o más caracteres"/> 
+        <input type="checkbox" name="Mostrar contraseña" id="Mostrar contraseña"> Mostrar Contraseña
+        <!--<label for="">Contraseña</label>
+        <input type="Contraseña"  placeholder="Contraseña"
+        pattern= ". {8,}">!-->
+        <br>
+        <br>
+        <label for="passwordsignup_confirm" class="youpasswd" >Confirmar constraseña </label>
+        <input id="passwordsignup_confirm" name="passwordsignup_confirm" required="required" type="password" placeholder="Contraseña"/>
+        <input type="checkbox" name="Mostrar contraseña" id="Mostrar contraseña">Mostrar Contraseña
+        <br>
+        <br>
+        {% if contrasena_ %}
+            <p>Las contraseñas coinciden</p>
+        {% else %}
+            <p>Las contraseñas no coinciden</p>
+        {% endif %}
+        <p><input type="checkbox" name="" id="">Declaro haber leído las condiciones generales del programa y la normativa sobre protección de datos.</p>
+        <br>
+        <input type="submit" value="Enviar">
+        </form>
+
+
+
+    </body>
+
+<html>
